@@ -4,7 +4,7 @@ QT += network
 
 CONFIG += c++14
 
-TARGET = EventClient
+TARGET = event_client
 CONFIG += staticlib
 CONFIG -= app_bundle
 DESTDIR = $$PWD/../
