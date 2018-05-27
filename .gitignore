@@ -70,3 +70,9 @@ Thumbs.db
 *.dll
 *.exe
 
+
+x64/
+
+release/
+
+debug/
