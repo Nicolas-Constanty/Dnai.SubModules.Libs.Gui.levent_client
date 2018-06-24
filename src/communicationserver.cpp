@@ -42,7 +42,7 @@ void CommunicationServer::setSocket(QTcpSocket *socket) {
 }
 
 void CommunicationServer::start() {
-    qDebug() << "[INFO] connection start !";
+    qDebug() << "==EventClient== [INFO] connection start !";
     connect(m_socket, SIGNAL(readyRead()), this, SLOT(onRead()));
     connect(this, SIGNAL(sendData(void*,unsigned int)), this, SLOT(send(void*,unsigned int)));
     connect(this, SIGNAL(sendDataAllocated(void*,uint)), this, SLOT(sendAllocatedData(void*,uint)));
@@ -70,7 +70,7 @@ void CommunicationServer::sendAllocatedData(void *data, unsigned int size) {
 void CommunicationServer::sendEventRegisterToAllClient(SendEventRegisterPackageAnswerServer &eventRegisterAnswerServer) {
 
     if (!m_clients) {
-        qDebug() << "m_clients is nil";
+        qDebug() << "==EventClient== m_clients is nil";
         return;
     }
 

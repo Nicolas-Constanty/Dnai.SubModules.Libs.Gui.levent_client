@@ -96,7 +96,7 @@ void EventConsumer::receiveData(void *data, unsigned int size) {
 void EventConsumer::onPropertiesInit() {
     m_com = ClientManager::shared().getFrom(m_clientName);
     if (m_com == NULL) {
-        qDebug() << "[WARNING] no client found for " << m_clientName;
+        qDebug() << "==EventConsumer== [WARNING] no client found for " << m_clientName;
     } else {
         m_parser.parse(m_description);
         QList<DescriptionParser::TypeParser> const &list = m_parser.getList();
