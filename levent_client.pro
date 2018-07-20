@@ -8,6 +8,9 @@ TARGET = event_client
 CONFIG += staticlib
 CONFIG -= app_bundle
 DESTDIR = $$PWD/../
+CONFIG(release, debug|release) {
+DEFINES += QT_NO_DEBUG_OUTPUT
+}
 
 TEMPLATE = lib
 
